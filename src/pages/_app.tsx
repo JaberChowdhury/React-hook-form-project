@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 export default function App() {
   return (
-    <section className="container pt-4">
+    <section className="container pt-4 min-h-screen">
       <details className="border-none">
         <summary className="flex text-slate-200 justify-between items-center border border-cyan-400 p-2 rounded font-bold text-2xl">
           Navigagion
