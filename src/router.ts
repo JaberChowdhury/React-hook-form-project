@@ -7,6 +7,8 @@ export type Path =
   | `/`
   | `/demo/UseformHook`
   | `/demo/UseformHook/code`
+  | `/demo/UseformHookWithMappingAndZod`
+  | `/demo/UseformHookWithMappingAndZod/code`
   | `/demo/UseformHookWithZod`
   | `/demo/UseformHookWithZod/code`;
 

@@ -1,6 +1,7 @@
 import navData from "@/constant/navigation";
 import Icon from "@/components/Icon";
 import { Link } from "react-router-dom";
+import { CardDescription } from "@/components/ui/card";
 
 export default () => {
   return (
@@ -8,17 +9,19 @@ export default () => {
       <summary className="flex text-slate-200 justify-between items-center border border-cyan-400 p-2 rounded font-bold text-2xl">
         Navigagion
       </summary>
-      <ol className="border p-2 rounded border-cyan-600">
+      <div className="border p-2 rounded border-cyan-600">
         {navData.navigation.map((data) => {
           return (
-            <li key={data.name} className="flex gap-x-2 items-center">
+            <Link
+              className="flex gap-x-4 my-2 p-2 rounded border-2 hover:border-cyan-600"
+              to={data.path}
+            >
               <Icon icon={data.icon} />
-              <Link to={data.path}>{data.name.toUpperCase()}</Link>
-              <hr />
-            </li>
+              <CardDescription className="p-0 m-0">{data.name}</CardDescription>
+            </Link>
           );
         })}
-      </ol>
+      </div>
     </details>
   );
 };

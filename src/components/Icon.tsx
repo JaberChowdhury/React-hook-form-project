@@ -1,4 +1,11 @@
-import { Home, Library, Code, Shield } from "lucide-react";
+import {
+  Home,
+  Library,
+  Repeat,
+  AlignJustify,
+  Code,
+  Shield,
+} from "lucide-react";
 import { z } from "zod";
 
 // just having fun with zod 😁
@@ -19,6 +26,10 @@ const Icon = ({ icon, className }: propsType) => {
       return <Code className={className} />;
     case "Shield":
       return <Shield className={className} />;
+    case "Loop":
+      return <Repeat className={className} />;
+    case "Aj":
+      return <AlignJustify className={className} />;
     default:
       return <Home className={className} />;
   }

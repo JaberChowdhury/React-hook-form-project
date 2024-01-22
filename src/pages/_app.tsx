@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 
 export default function App() {
   return (
-    <div className="container py-4">
+    <div className="p-4">
       <Navbar />
       <main>
         <Outlet />

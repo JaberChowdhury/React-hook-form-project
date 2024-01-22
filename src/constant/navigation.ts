@@ -21,16 +21,29 @@ export default {
     },
     {
       path: "/demo/UseformHookWithZod",
-      name: "use-form-Hook+zod",
+      name: "use-form-Hook with zod",
       icon: "Shield",
       description:
         "Form validation useformHook and zod also I wrote every input tag individually for learning purposes. Although we have a better option",
     },
     {
       path: "/demo/UseformHookWithZod/code",
-      name: "use-form-Hook+zod(source-code)",
+      name: "use-form-Hook with zod(source-code)",
       icon: "Code",
       description: "Source code of UseformHookWithZod example",
+    },
+    {
+      path: "/demo/UseformHookWithMappingAndZod",
+      name: "use-form-Hook with mapping and zod",
+      icon: "Loop",
+      description:
+        "Handling form with zod but this time we will map the data to remder input fields",
+    },
+    {
+      path: "/demo/UseformHookWithMappingAndZod/code",
+      name: "use-form-Hook with mapping and zod(source-code)",
+      icon: "Code",
+      description: "Source code of UseformHookWithMappingAndZod example",
     },
   ],
 };
