@@ -36,7 +36,7 @@ const data = JSON.stringify(
     },
   },
   null,
-  2,
+  4,
 );
 
 export default data;

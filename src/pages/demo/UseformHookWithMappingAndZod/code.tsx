@@ -1,7 +1,9 @@
+import Highlighter from "@/components/Highlighter";
+
 export default () => {
   return (
-    <pre>
-      <code>{`import { useForm, SubmitHandler } from "react-hook-form";
+    <Highlighter
+      code={`import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -214,7 +216,8 @@ const Home = () => {
   );
 };
 
-export default Home;`}</code>
-    </pre>
+export default Home;
+`}
+    />
   );
 };

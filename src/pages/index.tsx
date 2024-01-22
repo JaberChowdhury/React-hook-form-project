@@ -1,6 +1,7 @@
 import packages from "@/constant/packages";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import List from "@/components/List";
+import Highlighter from "@/components/Highlighter";
 
 const Home = () => {
   return (
@@ -11,9 +12,7 @@ const Home = () => {
           <CardTitle>Dependency of this project</CardTitle>
         </CardHeader>
         <CardContent>
-          <pre>
-            <code>{packages}</code>
-          </pre>
+          <Highlighter code={packages} />
         </CardContent>
       </Card>
     </div>

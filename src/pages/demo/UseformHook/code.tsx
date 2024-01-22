@@ -1,7 +1,9 @@
+import Highlighter from "@/components/Highlighter";
+
 export default () => {
   return (
-    <pre>
-      <code>{`import { useForm, SubmitHandler } from "react-hook-form";
+    <Highlighter
+      code={`import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -361,7 +363,7 @@ const UseformHook = () => {
 };
 
 export default UseformHook;
-`}</code>
-    </pre>
+`}
+    />
   );
 };
