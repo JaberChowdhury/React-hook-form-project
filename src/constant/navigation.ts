@@ -10,7 +10,8 @@ export default {
       path: "/demo/useformHook",
       name: "use-form-Hook",
       icon: "Library",
-      description: "Experimenting React hook form",
+      description:
+        "Experimenting React hook form also I wrote every input tag individually for learning purposes.",
     },
     {
       path: "/demo/useformHook/code",
@@ -22,7 +23,8 @@ export default {
       path: "/demo/UseformHookWithZod",
       name: "use-form-Hook+zod",
       icon: "Shield",
-      description: "form validation useformHook and zod",
+      description:
+        "Form validation useformHook and zod also I wrote every input tag individually for learning purposes. Although we have a better option",
     },
     {
       path: "/demo/UseformHookWithZod/code",
