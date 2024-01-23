@@ -1,8 +1,7 @@
-<h1 align="center">Rract-project</h1>
+<h1 align="center">React-project</h1>
 <hr />
 
 <h1 align="center">React + Typescript + react-hook-form + zod</h1>
 
-## Description : starter code for react project with file based routing
-
+## Description : practising react-hook-form with zod for form validation
 <hr />
