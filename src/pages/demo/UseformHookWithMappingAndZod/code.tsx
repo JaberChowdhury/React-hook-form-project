@@ -8,13 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import fieldData from "@/constant/fieldData";
-const ErrorBox = ({ message }: { message: string | undefined }) => {
-  return (
-    <div className="w-full p-1 border text-red-700 border-red-700 rounded text-center">
-      {message}
-    </div>
-  );
-};
+import Highlighter from "@/components/Highlighter";
 
 const Home = () => {
   const [json, setJson] = useState("");
@@ -60,6 +54,13 @@ const Home = () => {
     | "married"
     | "gender";
 
+  const ErrorBox = ({ message }: { message: string | undefined }) => {
+    return (
+      <div className="w-full p-1 border text-red-700 border-red-700 rounded text-center">
+        {message}
+      </div>
+    );
+  };
   const {
     register,
     handleSubmit,
@@ -96,6 +97,7 @@ const Home = () => {
     }
   };
 
+  console.log(errors);
   return (
     <div className="w-full min-h-screen">
       <h1 className="w-full text-center underline">
@@ -114,6 +116,9 @@ const Home = () => {
                   aria-invalid={!!errors[data.name as FieldName]}
                   type={data.type}
                 />
+                {errors[data.name as FieldName] && (
+                  <ErrorBox message={errors[data.name as FieldName]?.message} />
+                )}
               </label>
             );
           } else if (data.variant === "location") {
@@ -138,6 +143,9 @@ const Home = () => {
                     );
                   })}
                 </select>
+                {errors[data.name as FieldName] && (
+                  <ErrorBox message={errors[data.name as FieldName]?.message} />
+                )}
               </label>
             );
           } else if (data.variant === "time") {
@@ -151,6 +159,9 @@ const Home = () => {
                   type={data.type}
                   {...register(data.name as FieldName)}
                 />
+                {errors[data.name as FieldName] && (
+                  <ErrorBox message={errors[data.name as FieldName]?.message} />
+                )}
               </label>
             );
           } else if (data.variant === "gender") {
@@ -178,6 +189,9 @@ const Home = () => {
                   />
                   Female
                 </label>
+                {errors[data.name as FieldName] && (
+                  <ErrorBox message={errors[data.name as FieldName]?.message} />
+                )}
               </fieldset>
             );
           } else if (data.variant === "married") {
@@ -193,24 +207,17 @@ const Home = () => {
                   type={data.type}
                 />
                 <div>{data.name.toUpperCase()}</div>
+                {errors[data.name as FieldName] && (
+                  <ErrorBox message={errors[data.name as FieldName]?.message} />
+                )}
               </label>
-            );
-          }
-
-          {
-            errors[data.name as FieldName] && (
-              <ErrorBox message={errors[data.name as FieldName]?.message} />
             );
           }
         })}
         <button disabled={isSubmitting} aria-busy={isSubmitting} type="submit">
           Submit
         </button>
-        {json && (
-          <pre>
-            <code className="w-full">{json}</code>
-          </pre>
-        )}
+        {json && <Highlighter code={json} />}
       </form>
     </div>
   );
