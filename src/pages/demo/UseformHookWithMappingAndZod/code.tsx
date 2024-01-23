@@ -1,9 +1,14 @@
 import Highlighter from "@/components/Highlighter";
+import fieldData from "@/constant/fieldData";
 
 export default () => {
   return (
-    <Highlighter
-      code={`import { useForm, SubmitHandler } from "react-hook-form";
+    <>
+      <h1>FieldData</h1>
+      <Highlighter code={JSON.stringify({ fieldData }, null, 2)} />
+      <h1>Source code</h1>
+      <Highlighter
+        code={`import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -225,6 +230,7 @@ const Home = () => {
 
 export default Home;
 `}
-    />
+      />
+    </>
   );
 };
