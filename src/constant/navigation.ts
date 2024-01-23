@@ -45,5 +45,17 @@ export default {
       icon: "Code",
       description: "Source code of UseformHookWithMappingAndZod example",
     },
+    {
+      path: "/demo/WithUiLibraryAndZod",
+      name: "use-form-Hook with shadcn ui and zod",
+      icon: "BarChartHorizontal",
+      description: "Here we will see how to handle form with shadcn and zod",
+    },
+    {
+      path: "/demo/WithUiLibraryAndZod/code",
+      name: "use-form-Hook with shadcn ui and zod(source-code)",
+      icon: "Code",
+      description: "Source code of WithUiLibraryAndZod example",
+    },
   ],
 };

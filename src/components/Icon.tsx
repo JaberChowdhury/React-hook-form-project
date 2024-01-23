@@ -5,6 +5,7 @@ import {
   AlignJustify,
   Code,
   Shield,
+  BarChartHorizontal,
 } from "lucide-react";
 import { z } from "zod";
 
@@ -30,6 +31,8 @@ const Icon = ({ icon, className }: propsType) => {
       return <Repeat className={className} />;
     case "Aj":
       return <AlignJustify className={className} />;
+    case "BarChartHorizontal":
+      return <BarChartHorizontal className={className} />;
     default:
       return <Home className={className} />;
   }

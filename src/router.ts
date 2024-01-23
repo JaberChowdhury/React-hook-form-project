@@ -10,7 +10,9 @@ export type Path =
   | `/demo/UseformHookWithMappingAndZod`
   | `/demo/UseformHookWithMappingAndZod/code`
   | `/demo/UseformHookWithZod`
-  | `/demo/UseformHookWithZod/code`;
+  | `/demo/UseformHookWithZod/code`
+  | `/demo/WithUiLibraryAndZod`
+  | `/demo/WithUiLibraryAndZod/code`;
 
 export type Params = {};
 
